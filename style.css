@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    text-align: center;
+    width: 35rem;
+    padding: 2rem;
+}
+
+h1{
+    color: #0069D9;
+    padding-bottom: 2rem;
+}
+
+.row-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.fname{
+    margin-right: 1rem;
+}
+
+.row-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gender{
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 600px){
+
+    .row-1,
+    .row-2{
+        display: block;
+    }
+
+    .fname,
+    .gender{
+        margin-right: 0;
+    }
+
+    h1{
+        padding-top: 1rem;
+    }
+
+}

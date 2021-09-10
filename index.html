@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <h1><b>Information</b></h1>
+            <form action="/action_page.php" class="needs-validation" novalidate>
+                <div class="row-1">
+                    <div class="form-group fname">
+                        <input type="text" class="form-control form-control-lg" id="uname" placeholder="First Name" name="uname" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group lname">
+                        <input type="text" class="form-control form-control-lg" id="uname" placeholder="Last Name" name="uname" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>    
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg" placeholder="Email" id="email" name="email" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="row-2">
+                    <div class="form-group gender">
+                        <select class="form-control form-control-lg" id="sel1">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group calender">
+                        <input type="date" class="form-control form-control-lg" id="birthday" placeholder="Birthday" name="birthday" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>        
+                <div class="form-group">
+                    <input type="password" class="form-control form-control-lg" id="pwd" placeholder="Password" name="pswd" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">SUBMIT</button>
+              </form>
+              
+              <script>
+              // Disable form submissions if there are invalid fields
+              (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                  // Get the forms we want to add validation styles to
+                  var forms = document.getElementsByClassName('needs-validation');
+                  // Loop over them and prevent submission
+                  var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                    }, false);
+                  });
+                }, false);
+              })();
+              </script>
+        </div>
+    </div>
+</body>
+</html>
